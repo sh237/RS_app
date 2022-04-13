@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no,initial-scale=1.0,maximam-scale=1.0,minimum-scale=1.0">
+    <meta http-equiv="refresh" content="180">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>日付管理</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">日付管理システム</a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-controls="Navber"
+                aria-expand="false"
+                aria-label="ナビゲーションの切替">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="Navber">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'admin:index' %}">管理サイト</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="{% url 'admin:logout'}">ログアウト</a>
+            </li> -->
+          </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+      <div class="container">
+          <canvas id="myChart"></canvas>
+      </div>
+      <div class="row mt-3">
+        <div class="col-12">
+            <form action="" method="POST">
+                {{form.as_p}}
+                <!-- {{form.media}} -->
+
+                {% csrf_token %}
+                <button type="submit" class="btn btn-secondary">投稿する</button>
+            </form>
+            
+        </div>
+      </div>
+    </div>
+   
+
+
+  </body>
+</html>
